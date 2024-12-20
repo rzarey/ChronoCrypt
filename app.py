@@ -301,6 +301,7 @@ def extract():
     global saved_key
     decrypted_text = ""
     image_path = ""
+    shift = 0  # Default shift value
     if request.method == 'POST':
       shift = int(request.form.get('shift', 0))
       if 'image' not in request.files:
@@ -329,12 +330,12 @@ def extract():
                         input_key = kf.read().strip()
                  except FileNotFoundError:
                      return render_template('extract.html', error="File kunci tidak ditemukan!")
-            
+
         elif 'key' in request.form:
              input_key = request.form['key']
-          
+
         extracted_binary = ImageSteganography.decode_message(image_path)
-        
+
         if len(input_key) != len(extracted_binary):
            return render_template('extract.html', decrypted_text="", original_image=image_path, error="Panjang Kunci tidak sesuai!")
 
@@ -364,4 +365,4 @@ def download_extract_text():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
