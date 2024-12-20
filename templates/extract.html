@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Extract Message{% endblock %}
+{% block content %}
+        <div class="header">
+            <a href="/">Home</a>
+            <p>Program Enkripsi dan Dekripsi Kuantum Caesar Cipher (QCC) v2.0</p>
+        </div>
+        <div class="content">
+        <h2 class="center-text">Ekstrak Pesan</h2>
+            {% if error %}
+                <p style="color: red;">{{ error }}</p>
+            {% endif %}
+            <form method="post" enctype="multipart/form-data">
+                <div class="input-container">
+                   <label for="image">Gambar yang memiliki pesan:</label>
+                  <input type="file" id="image" name="image" accept=".png, .jpg, .jpeg" required>
+                </div>
+                 <div class="input-container">
+                  <label for="key">Masukan Kunci:</label>
+                    <input type="text" id="key" name="key" >
+                </div>
+               <div class="input-container">
+                  <label for="shift">Masukan Pergeseran:</label>
+                  <input type="number" id="shift" name="shift" required>
+              </div>
+                 <button type="submit">Proses</button>
+            </form>
+
+             <div class="hasil-container">
+             <div class="textarea-box">
+               <p>Hasil teks</p>
+                <textarea id="result" name="result"  rows="10" readonly>{{ decrypted_text }}</textarea>
+              </div>
+            </div>
+          {% if original_image %}
+            <div class="image-container" style="display: flex; justify-content: center;">
+                  <div class="image-preview">
+                      <p>Gambar</p>
+                      <img src="{{ original_image }}" alt="Original Image" style="max-width: 300px; display: block; margin: auto;">
+                  </div>
+            </div>
+            {% endif %}
+        <form method="post" action="/download_extract_text">
+             <div class="input-container">
+                <label for="filename">Simpan Hasil sebagai File:</label>
+                <input type="text" id="filename" name="filename" placeholder="Enter filename.txt">
+                <input type="hidden" name="decrypted_text" value="{{ decrypted_text }}">
+             </div>
+             <button type="submit">Simpan ke File</button>
+        </form>
+        </div>
+         <div class="footer">
+           2200018411 Reyhanssan Islamey
+        </div>
+{% endblock %}

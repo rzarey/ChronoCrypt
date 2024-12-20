@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}Encrypt{% endblock %}
+{% block content %}
+        <div class="header">
+            <a href="/">Home</a>
+            <p>Program Enkripsi dan Dekripsi Kuantum Caesar Cipher (QCC) v2.0</p>
+        </div>
+        <div class="content">
+        <h2 class="center-text">Enkripsi pesan</h2>
+          <form method="post">
+           <div class="input-container">
+                <label for="text">Masukan teks:</label>
+                <textarea id="text" name="text" rows="10"></textarea>
+            </div>
+             <div class="input-container">
+                <label for="shift">Masukan Pergeseran:</label>
+                <input type="number" id="shift" name="shift" required>
+            </div>
+          <button type="submit">Proses</button>
+        </form>
+        <div class="hasil-container">
+        <div class="textarea-box">
+           <p>Hasil teks</p>
+             <textarea rows="10" readonly>{{ encrypted_text_caesar }}</textarea>
+           </div>
+           <div class="textarea-box">
+            <p>Hasil Kunci</p>
+             <textarea  rows="1" readonly>{{ key }}</textarea>
+           </div>
+            <div class="textarea-box">
+            <p>Hasil Enkripsi Quantum</p>
+             <textarea rows="10" readonly>{{ encrypted_text_quantum }}</textarea>
+           </div>
+           </div>
+           <form method="post" action="/download_encrypt">
+            <div class="input-container">
+                <label for="filename">Simpan Hasil Enkripsi sebagai File:</label>
+                <input type="text" id="filename" name="filename" placeholder="Enter filename.txt">
+                <input type="hidden" name="encrypted_text_quantum" value="{{ encrypted_text_quantum }}">
+             </div>
+                <button type="submit">Simpan Hasil Enkripsi</button>
+         </form>
+         <form method="post" action="/download_key">
+                <div class="input-container">
+                    <label for="key_filename">Simpan Kunci sebagai File:</label>
+                    <input type="text" id="key_filename" name="key_filename" placeholder="Enter key filename.txt">
+                    <input type="hidden" name="key" value="{{ key }}">
+                </div>
+                 <button type="submit">Simpan Kunci</button>
+            </form>
+        </div>
+    <div class="footer">
+      2200018411 Reyhanssan Islamey
+    </div>
+{% endblock %}
