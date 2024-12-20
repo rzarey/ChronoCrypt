@@ -1,11 +1,14 @@
+# ChronoCrypt v2.0
 
-# QuantumCipher Suite v2.0
+**Deskripsi Singkat**
 
-QuantumCipher Suite v2.0 adalah aplikasi web yang dirancang untuk melakukan enkripsi dan dekripsi teks menggunakan kombinasi algoritma Caesar Cipher dan teknik kuantum sederhana. Aplikasi ini juga menyertakan fitur steganografi untuk menyisipkan pesan terenkripsi ke dalam gambar.
+ChronoCrypt adalah aplikasi web yang dirancang untuk melakukan enkripsi dan dekripsi teks menggunakan kombinasi algoritma Caesar Cipher dan teknik kuantum sederhana. Aplikasi ini juga menyertakan fitur steganografi untuk menyisipkan pesan terenkripsi ke dalam gambar.
 
-Ini adalah pengembangan dari Program Enkripsi dan Dekripsi Kuantum Caesar Cipher (QCC) v1.0, yang bertujuan untuk memberikan antarmuka pengguna yang lebih baik, fitur yang lebih lengkap, serta tampilan yang lebih menarik dan responsif.
+Ini adalah pengembangan dari Program Enkripsi dan Dekripsi Kuantum Caesar Cipher (QCC) v1.0, yang bertujuan untuk memberikan antarmuka pengguna yang lebih baik, fitur yang lebih lengkap, serta tampilan yang lebih menarik dan responsif dengan tema yang menggabungkan waktu dan enkripsi.
+
 
 **Fitur Utama**
+
 *   **Enkripsi Teks:** Mengenkripsi teks menggunakan Caesar Cipher, kemudian dilanjutkan dengan enkripsi kuantum sederhana (berbasis gerbang X dan pengukuran).
 *   **Dekripsi Teks:** Mendekripsi teks yang telah dienkripsi menggunakan metode yang sama.
 *   **Penyimpanan dan Pembukaan File Teks:** Menyimpan hasil enkripsi dan dekripsi ke dalam file teks, dan juga membuka file teks untuk dekripsi.
@@ -14,6 +17,7 @@ Ini adalah pengembangan dari Program Enkripsi dan Dekripsi Kuantum Caesar Cipher
 *   **Penyimpanan dan Pembukaan File Gambar:** Menyimpan gambar setelah penyisipan, dan menyimpan pesan terdekripsi ke dalam file teks.
 *   **Tampilan Interaktif:** Antarmuka pengguna yang responsif, sederhana, dan menarik dengan animasi latar belakang partikel kuantum.
 *  **Opsi Input dan Output Kunci:** Input kunci dapat berupa text manual atau file, begitu juga dengan output untuk enkripsi pesan.
+
 
 **Teknologi yang Digunakan**
 
@@ -76,7 +80,7 @@ your_project/
 │   ├── decrypt.html
 │   ├── insert.html
 │   ├── extract.html
-│   └── base.html  
+│   └── base.html
 ├── static/
 │   ├── style.css
 │   └── uploads/
@@ -104,8 +108,7 @@ Jika Anda ingin berkontribusi pada proyek ini, ikuti langkah-langkah berikut:
 3.  Lakukan perubahan pada branch tersebut.
 4.  Buat pull request ke repositori asli.
 
-
 **Penutup**
 
-Terima kasih telah menggunakan QuantumCipher Suite v2.0. Jika Anda memiliki pertanyaan atau masukan, jangan ragu untuk menghubungi saya.
+Terima kasih telah menggunakan ChronoCrypt. Jika Anda memiliki pertanyaan atau masukan, jangan ragu untuk menghubungi saya.
 
