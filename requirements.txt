@@ -1,4 +1,4 @@
-Flask
-cirq
-pillow
-werkzeug
+Flask==2.3.2
+cirq==1.2.0
+pillow==9.5.0
+werkzeug==2.3.4
