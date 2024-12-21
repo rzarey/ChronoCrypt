@@ -39,16 +39,14 @@ Berikut adalah langkah-langkah untuk menginstal dan menjalankan aplikasi:
     Clone repositori GitHub ke komputer Anda menggunakan perintah berikut di terminal atau command prompt:
 
     ```bash
-    git clone [URL_Repositori_Anda]
+    git clone https://github.com/rzarey/ChronoCrypt.git
     ```
-
-    Ganti `[URL_Repositori_Anda]` dengan URL repositori GitHub Anda.
 
 3.  **Masuk ke Direktori Proyek:**
     Pindah ke direktori proyek menggunakan perintah:
 
     ```bash
-    cd nama_folder_proyek
+    cd ChronoCrypt
     ```
 
 4.  **Instal Dependensi:**
